@@ -8,14 +8,11 @@ using System.Text;
 
 using System.Threading.Tasks;
 
-
-
-
-
 namespace Mission3_Assignment
 {
     public class SupportingClass
     {
+        // Writing the board using the numbers passed through the array
         public void PrintBoard(string[] boardArray)
         {
             Console.WriteLine(boardArray[0] + " | " + boardArray[1] + " | " + boardArray[2]);
@@ -25,10 +22,12 @@ namespace Mission3_Assignment
             Console.WriteLine(boardArray[6] + " | " + boardArray[7] + " | " + boardArray[8]);
         }
 
+        // Declaring the winner using the method
         public string CheckForWinner(string[] boardArray)
         {
             string winner = "n";
 
+            // Checking the condition to see if there is a winner
             // 1, 2, 3 horizontal top row
             if (boardArray[0] == boardArray[1] && boardArray[1] == boardArray[2])
             {
@@ -70,6 +69,7 @@ namespace Mission3_Assignment
                 winner = boardArray[2];
             }
 
+            // Checking to see if there is a tie
             else if (boardArray[0] != "1" && boardArray[1] != "2" && boardArray[2] != "3" && boardArray[3] != "4" && boardArray[4] != "5" && boardArray[5] != "6" && boardArray[6] != "7" && boardArray[7] != "8" && boardArray[8] != "9")
             {
                 winner = "t";
@@ -77,6 +77,7 @@ namespace Mission3_Assignment
 
             if (winner != "n")
             {
+                // Printing out if there is a winner or if it ends up being a tie
                 if (winner == "t")
                 {
                     Console.WriteLine("It's a Tie!");
