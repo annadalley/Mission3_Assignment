@@ -72,12 +72,19 @@ namespace Mission3_Assignment
 
             else if (boardArray[0] != "1" && boardArray[1] != "2" && boardArray[2] != "3" && boardArray[3] != "4" && boardArray[4] != "5" && boardArray[5] != "6" && boardArray[6] != "7" && boardArray[7] != "8" && boardArray[8] != "9")
             {
-                Console.WriteLine("It's a Tie!");
+                winner = "t";
             }
 
             if (winner != "n")
             {
-                Console.WriteLine("Player " + winner + " wins!");
+                if (winner == "t")
+                {
+                    Console.WriteLine("It's a Tie!");
+                }
+                else
+                {
+                    Console.WriteLine("Player " + winner + " wins!");
+                }
             }
             return winner;
         }
