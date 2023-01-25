@@ -80,11 +80,11 @@ namespace Mission3_Assignment
                 // Printing out if there is a winner or if it ends up being a tie
                 if (winner == "t")
                 {
-                    Console.WriteLine("It's a Tie!");
+                    Console.WriteLine("\nIt's a Tie!\n");
                 }
                 else
                 {
-                    Console.WriteLine("Player " + winner + " wins!");
+                    Console.WriteLine("\nPlayer " + winner + " wins!\n");
                 }
             }
             return winner;
