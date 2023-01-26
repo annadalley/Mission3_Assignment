@@ -20,11 +20,12 @@ namespace Mission3_Assignment
             // while there is no winner ("n"), print the board, ask the first user where they would like to go. If that spot hasn't already been taken, fill in the spot. If it has, make them pick another spot.
             while (winner == "n")
             {
+                Console.WriteLine("\n");
                 sc.PrintBoard(board);
 
                 do // spotTaken is going to begin as false but keep the user in this loop until they choose a valid entry
                 {
-                    Console.WriteLine("\nWhere would Player X like to place an X?");
+                    Console.WriteLine("\nPlayer X: Type an available number to place an X:");
                     choice1 = Console.ReadLine();
 
                     // this checks if the location in the array has already been taken by an O or X. since it is a string[], the comparison needs a Convert.ToInt32 to use its location syntax
@@ -53,11 +54,12 @@ namespace Mission3_Assignment
                 winner = sc.CheckForWinner(board);
                 if (winner == "n")
                 {
+                    Console.WriteLine("\n");
                     sc.PrintBoard(board);
 
                     do
                     {
-                        Console.WriteLine("\nWhere would Player O like to place an O?");
+                        Console.WriteLine("\nPlayer O: Type an available number to place an O:");
                         choice2 = Console.ReadLine();
 
                         if (board[Convert.ToInt32(choice2) - 1] == "O" || board[Convert.ToInt32(choice2) - 1] == "X")
